@@ -1,0 +1,692 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'montserrat';
+  color: #fff;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+*::selection{
+  background-color: #fff;
+  color: #ADE023;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+    background-color: #000;
+    border-left: 2px solid #5BB22A;
+}
+body::-webkit-scrollbar-thumb{
+   background-color: #fff;
+   border-radius: 20px;
+}
+#nav{
+  height: 145px;
+  width:100%;
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 150px;
+  gap: 45px;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 999999;
+}
+#nav a{
+  text-decoration: none;
+}
+#nav img{
+  height: 75px;
+  scale: 1;
+}
+#nav img:hover{
+  scale: 0.9;
+  transition: all ease 0.2s;
+}
+#cursor{
+  height:25px ;
+  width: 25px;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #bdf620;
+  z-index: 99;
+}
+#cursor-blur{
+  height:350px;
+  width: 350px;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #bce7485d;
+  filter: blur(50px);
+  z-index: 9;
+}
+video{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  object-fit: cover;
+  z-index: -1;
+}
+#main{
+position: relative;
+background-color: rgba(0, 0, 0, 0.372);
+overflow: hidden;
+}
+#page1{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  z-index: 10;
+}
+#page1 h1{
+ font-size: 140px;
+ font-weight: 900;
+ text-transform: uppercase;
+ position: relative;
+ width: 80%;
+}
+#page1 h1::before{
+  content: "eat. drink. play.";
+  position: absolute;
+  color: black;
+  top: -6px;
+  left: -6px;
+  z-index: -1; 
+  -webkit-text-stroke: 2px #95C11E;
+}
+#page1 h2{
+  font-size: 35px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#page1 h2{
+  font-size: 20px;
+  font-weight: 500;
+  width: 40%;
+}
+#page1 p{
+  width: 40%;
+}
+#page1 #arrow{
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border: 3px solid #95c11e;
+  position: absolute;
+  text-align: center;
+  font-weight: 100;
+  left: -2%;
+  bottom: 0.5%;
+}
+#arrow i{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  font-size: 70px;
+  font-weight: 100;
+}
+#arrow:hover{
+    scale: 0.3;
+    background-color: #95c11e;
+}
+#page2{
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+}
+#scroller{
+  position: relative;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+  display: none;
+}
+#scroller-in{
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll;
+  animation-duration: 25s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#scroller h4{
+  display: inline-block;
+  font-size: 140px;
+  font-weight: 900;
+  margin-right: 10px;
+  color: black;
+  font-family: gilroy;
+ transition: all linear 0.3s;
+  -webkit-text-stroke: 2px #fff;
+}
+#scroller h4:hover{
+  color: #95c11e;
+  -webkit-text-stroke: 2px #95c11e;
+}
+@keyframes scroll{
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(-100%);
+  }
+}
+#about-us{
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+#img-left{
+  height: 200px;
+  width: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+#img-right{
+  height: 260px;
+  width: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+#about-us-i{
+  height: 250px;
+  width: 50px;
+}
+#about{
+  width: 53%;
+  text-align: center;
+}
+#about h3{
+  font-family: Arial, Helvetica, sans-serif;
+font-size: 50px;
+font-weight: 900;
+margin-bottom: 25px;
+}
+#about p{
+  font-size: 22px;
+  line-height: 40px;
+font-family: Arial, Helvetica, sans-serif;
+}
+#img img{
+  height: 25vh;
+  width: 25vh;
+  position: absolute;
+  left: 6%;
+ top: 26.5%;
+}
+#card-continer{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  overflow: hidden;
+}
+.card{
+  height: 80%;
+  width: 25%;
+  border-radius: 25px;
+  background-size: cover;
+  background-position: center;
+}
+.card::before{
+  top: -20%;
+  left: -20%;
+}
+#card1{
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2{
+background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4.jpg?strip=all&lossy=1&sharp=1&ssl=1 );
+}
+#card3{
+overflow: hidden;
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.card h1{
+  font-size: 40px;
+  text-align: left;
+  margin-left: 20px;
+  top: 75%;
+  position: relative;
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 45px;
+  transition: all ease 0.7s;
+}
+#card1 h1{
+  margin-top: 30px;
+}
+#card2 h2{
+  position: relative;
+  font-weight: 900;
+  top: 74%;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#card3 h1{
+  margin-top: 30px;
+}
+.overlay{
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #95C11E;
+  position: relative;
+  transition: all ease 0.7s;
+  opacity: 0;
+  overflow: hidden;
+}
+.overlay h3{
+  font-size: 40px;
+  font-weight: 999;
+  padding-left: 30px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.overlay p{
+  font-size: 18px;
+  padding-left:30px;
+  padding-top: 30px;
+  padding-right: 30px;
+  color: #000;
+}
+.icon{
+  position: relative;
+  height: 15vh;
+  width: 15vh;
+  border-radius: 50%;
+  border: 2px solid black;
+  left: 75%;
+  top: -2.5%;
+}
+.icon a{
+  text-decoration: none;
+}
+.icon i{
+ text-align: center;
+ position: relative;
+ font-weight: -50;
+ font-size: 50px;
+ top: 15%;
+ left: 25%;
+ color: #000000;
+ z-index: 10;
+}
+.card:hover .overlay{
+  opacity: 1;
+}   
+.icon:hover{
+  background-color: #fff;
+}
+#green-div{
+  height: 40vh;
+  width: 100%;
+  /* background-color: #95c11e; */
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  background: linear-gradient(to left bottom, #5BB22A, #ADE023 );
+}
+#green-div img{
+  height: 170%;
+  width: 20%;
+  position: relative;
+}
+#left{
+ rotate: 180deg;
+ position: relative;
+ left: -3%;
+}
+#right{
+  position: relative;
+  right: -3%;
+}
+#green-div h4{
+  font-size: 30px;
+  text-align: center;
+  margin-top: 100px;
+  font-weight: 900;
+  color: #000;
+}
+#swiper-pick-text{
+  height: 80vh;
+  width: 100%;
+  position: relative;
+ display: flex;
+justify-content: space-between;
+gap: 110px;
+}
+.swiper {
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  margin-top: 80px;
+  margin-left: 120px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet{
+  background-color: #ADE023;
+  width: 15px;
+  height: 15px;
+} 
+.swiper{
+  --add-bottom: 50px;
+  padding-bottom: var(--add-bottom);
+}
+.swiper [class^="swiper-button-"]{
+  top: calc(50% - var(--add-bottom) / 2);
+}
+
+.alltext h2{
+  font-size: 50px;
+  text-align: left;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 120px;
+  margin-bottom: 25px;
+}
+.alltext p{
+  width: 80%;
+  font-size: 22px;
+  font-weight: 50;
+  line-height: 37px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.alltext button{
+  padding: 15px 35px;
+  color: #fff;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 3px solid #ADE023;
+  text-align: center;
+  margin-top: 25px;
+}
+#page3{
+  height: 110vh;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+}
+#instgram{
+ top: 5%;
+  height: 35vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #95C11E;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 99.5%;
+  rotate: -3deg;
+  background-color: aqua;
+  animation: scroll;
+  gap: 15px;
+}
+#instgram>img{
+  height: 100%;
+  width: 20%;
+  border-radius: 10px;
+ background-size: cover;
+  /* white-space: nowrap;
+  animation: scroll;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; */
+}
+/* #instgram::-webkit-scrollbar{
+  display: none;
+}
+@keyframes scroll{
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(-100%);
+  }
+} */
+
+#swipers{
+  height: 70vh;
+  width: 60%;
+  position: relative;
+  left: 12%;
+}
+#wrappers{
+background: transparent;
+}
+#page3 p{
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 40px;
+}
+#page3 img{
+  height: 40px;
+  position: absolute;
+}
+#colon1{
+  top: 51%;
+  left: 15%;
+}
+#colon2{
+  top: 95%;
+  right: 15%;
+  z-index: 99;
+}
+#img1 img{
+  height: 25vh;
+  width: 25vh;
+  position: absolute;
+ margin-top: 400px;
+left: 8%;
+}
+#page4{
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+#boxs{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+}
+.box{
+  position: relative;
+  height: 22vh;
+  width: 26%;
+  background-color: #95C11E;
+  border-radius: 20px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.box h2{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  background-color: #95C11E;
+  z-index: 10;
+  font-weight: 900;
+  justify-content: center;
+  padding-top: 50px;
+  transition: all ease 0.5s;
+
+}
+.box img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.2;
+}
+.box h2:hover{
+  color: #fff;
+  background-color: transparent;
+}
+.box h2:hover img{
+  scale: 1;
+}
+#page4 h1{
+  font-size: 83px;
+  position: relative;
+  display: inline-block;
+  top: 24.5%;
+  color: #000;
+  left: 7.5%;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-text-stroke: 1px #fff;
+}
+/* #page4 .box h2 :hover #page4 h1{
+  -webkit-text-stroke: #95C11E;
+} */
+#footer{
+  height: 50vh;
+  width: 100%;
+ background: linear-gradient(to left bottom, #5BB22A, #ADE023 );
+ position: relative;
+ display: flex;
+}
+#footer img{
+  height: 100%;
+  width: 30%;
+  background-size: cover;
+  overflow: hidden;
+}
+#footer #last{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  text-align: center;
+  justify-content: flex-start;
+  z-index: 99;
+}
+#last .f1{
+  position: relative;
+  top: -13%;
+}
+.f1 .icons{
+  position: relative;
+  display: flex;
+  font-size: 40px;
+  gap: 8px;
+top: -23%;
+left: 33%;
+}
+.icons i{
+  color: #000;
+}
+.f1 img:hover{
+   scale: 0.9;
+}
+.icons i:hover{
+  color: #fff;
+}
+#last .f2{
+  position: relative;
+  text-align: left;
+  font-size: 22px;
+  white-space: nowrap;
+  line-height: 50px;
+  top: 20%;
+  left: -6%;
+}
+.f2 h2{
+  font-weight: 900;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.f2 h2:hover{
+  color: #fff;
+  transition: all ease 0.3s;
+}
+#last .f3{
+  position: relative;
+  text-align: left;
+  font-size: 22px;
+  white-space: nowrap;
+  line-height: 50px;
+  top: 20%;
+  left: -2%;
+}
+.f3 h2{
+  font-weight: 900;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.f3 h2:hover{
+  color: #fff;
+  transition: all ease 0.3s;
+}
+#last .f4{
+  position: relative;
+ text-align: left;
+ top: 20%;
+ left: 5%;
+}
+.f4 h4{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #000;
+}
+.f4 h3{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  color: #000;
+  line-height: 35px;
+}
+.f4 h3:hover{
+  color: #fff;
+  transition: all ease 0.3s;
+}

@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    width: 100%;
+    position: relative;
+}
+#page1{
+    height: 115vh;
+    width: 100%;
+    position: relative;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+#text{
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+#text h4{
+    position: relative;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    color: #bdf620;
+    font-size: 20px;
+    top: 30%;
+    left: 28%;
+}
+#text h1{
+    position: relative;
+    top: 30%;
+    left: 28%;
+    width: 20%;
+    line-height: 80px;
+    font-size: 100px;
+    font-weight: 800;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#text h1::before{
+    content: "DINO CRAZY GOLF";
+    position: absolute;
+    color: black;
+    top: -3.5px;
+    left: -3.5px;
+    z-index: -1; 
+    -webkit-text-stroke: 2px #95C11E;
+  }
+#text h6{
+    position: relative;
+    top: 35%;
+    left: 28%;
+    font-weight: 400;
+    font-size: 20px;
+}
+#text p{
+    position: relative;
+    top: 39%;
+    left: 28%;
+    font-size: 20px;
+    width: 67%;
+    line-height: 35px;
+}
+#imgs{
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+#imgs img{
+    height: 80%;
+    position: relative;
+    top: 20%;
+    width: 100%;
+    border-radius: 20px;
+    background-size: cover;
+}

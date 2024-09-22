@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/header-style.css">
+</head>
+<body>
+<div id="nav">
+    <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="">
+    <a href="/Toptracer-range"><h4>Toptracer range</h4></a>
+   <a href="/Golf-lessons"> <h4>golf lessons</h4></a>
+   <a href="/Advanture-golf"> <h4>Adventure golf</h4> </a>
+   <a href="/Coffee"> <h4>coffee shop</h4></a>
+    <a href="/leagues"><h4>leagues</h4></a>
+</div>
+<div id="cursor"></div>
+<div id="cursor-blur"></div>
+
+
+<style>
+    *::selection{
+  background-color: #fff;
+  color: #ADE023;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+    background-color: #000;
+    border-left: 2px solid #5BB22A;
+}
+body::-webkit-scrollbar-thumb{
+   background-color: #fff;
+   border-radius: 20px;
+}
+#nav{
+  height: 145px;
+  width:100%;
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 150px;
+  gap: 45px;
+  text-transform: uppercase;
+  position: fixed;
+  z-index: 999999;
+}
+#nav a{
+  text-decoration: none;
+}
+#nav img{
+  height: 75px;
+  scale: 1;
+}
+#nav img:hover{
+  scale: 0.9;
+  transition: all ease 0.2s;
+}
+
+</style>
